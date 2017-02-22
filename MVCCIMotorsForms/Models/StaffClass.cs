@@ -11,11 +11,7 @@ namespace MVCCIMotorsForms.Models
                
         [Display(Name = "Salary")]
         public Nullable<decimal> Salary { get; set; }
-
-        public StaffClass() {}
-        public StaffClass(Person p):base(p){
-            Salary = p.Salary;
-        }
+        
 
               
         

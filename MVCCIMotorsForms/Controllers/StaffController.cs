@@ -22,12 +22,17 @@ namespace MVCCIMotorsForms.Controllers
                                          Address1 = x.Address1,
                                          Address2 = x.Address2,
                                          SuburbId = x.SuburbId,
-                                         Suburb = x.SuburbType.Suburb,
-                                         PersonType = x.PersonType.PersonType1,                                       
+                                         PersonTypeId = x.PersonTypeId,                                      
                                          Salary = x.Salary,
                                          PhoneNumber = x.PhoneNumber
                                      })
                                      .ToList();
+            
+            var viewModel = new StaffViewClass();
+            viewModel.Staffs = stafflist;
+            viewModel.SuburbTypes = GetSuburbs();
+            viewModel.PersonTypes = GetStaffTypes();
+            
             return View(stafflist);
         }
         private IEnumerable<SelectListItem> GetSuburbs()

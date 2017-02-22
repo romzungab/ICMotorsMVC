@@ -9,23 +9,14 @@ namespace MVCCIMotorsForms.Models
 {
     public class CustomerViewClass
     {
-        public CustomerClass Customer { get; set; }
+        [Display(Name = "Customer List")]
+        public List<CustomerClass> Customers { get; set; }
+        [Display(Name = "Search Key")]
+        public string SearchKey { get; set; }
         [Display(Name = "Suburb")]
         public IEnumerable<SelectListItem> SuburbTypes { get; set; }
-        public int SelectedSuburb { get; set; }
-        public CustomerViewClass() { }
-        public CustomerViewClass(Person customer)
-        {
-            Customer = new CustomerClass(customer);
-        }
-        public CustomerViewClass(Person customer, IEnumerable<SelectListItem> suburbType):this(suburbType)
-        {
-            Customer = new CustomerClass(customer);
-        }
+        [Display(Name = "Employee Type")]
+        public IEnumerable<SelectListItem> PersonTypes { get; set; }
 
-        public CustomerViewClass(IEnumerable<SelectListItem> suburbType)
-        {
-            SuburbTypes = suburbType;
-        }
     }
 }

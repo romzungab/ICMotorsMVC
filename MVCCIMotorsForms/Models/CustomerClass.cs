@@ -8,9 +8,7 @@ namespace MVCCIMotorsForms.Models
 {
     public class CustomerClass : PersonClass
     {
-        public CustomerClass() { }
-        public CustomerClass(Person p):base(p) {
-         
+               
         }
     }
 }

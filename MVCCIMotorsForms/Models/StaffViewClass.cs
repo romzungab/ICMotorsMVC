@@ -9,25 +9,13 @@ namespace MVCCIMotorsForms.Models
 {
     public class StaffViewClass
     {
-        [Display(Name = "Staff")]
-        public StaffClass Staff { get; set; }
+        [Display(Name = "Staff List")]
+        public List<StaffClass> Staffs { get; set; }
+        [Display(Name = "Search Key")]
+        public string SearchKey { get; set; }
         [Display(Name = "Suburb")]
-        public IEnumerable<SelectListItem>  SuburbTypes { get; set; }
+        public IEnumerable<SelectListItem> SuburbTypes { get; set; }
         [Display(Name = "Employee Type")]
         public IEnumerable<SelectListItem> PersonTypes { get; set; }
-      
-        public int SelectedSuburb { get; set; }
-        public int SelectedType { get; set; }
-        public StaffViewClass() { }
-        public StaffViewClass(IEnumerable<SelectListItem> suburbTypes, IEnumerable<SelectListItem> staffTypes) {
-
-            SuburbTypes = suburbTypes;
-            PersonTypes = staffTypes;
-        }
-        public StaffViewClass(Person staff, IEnumerable<SelectListItem> suburbTypes, IEnumerable<SelectListItem> staffTypes):this(suburbTypes, staffTypes)
-        {
-            Staff =new StaffClass(staff);
-          
-        }
     }
 }
