@@ -1,0 +1,90 @@
+﻿@model MVCCIMotorsForms.Models.StaffViewClass
+@{
+    ViewBag.Title = "Edit Staff Member";
+}
+
+
+<h2>Edit Staff Member</h2>
+<table>
+    @using (Html.BeginForm())
+    {
+       @Html.HiddenFor(m => m.Staff.PersonId)
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Staff.FirstName)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Staff.FirstName)
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Staff.LastName)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Staff.LastName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Staff.Salary)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Staff.Salary)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Staff.Address1)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Staff.Address1)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Staff.Address2)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Staff.Address2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Staff.PhoneNumber)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Staff.PhoneNumber)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.SuburbTypes)
+            </td>
+            <td>
+                @Html.DropDownListFor(m => m.Staff.SuburbId,
+                                            new SelectList(Model.SuburbTypes, "Value", "Text"))
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.PersonTypes)
+            </td>
+            <td>
+                @Html.DropDownListFor(m => m.Staff.PersonTypeId,
+                                            new SelectList(Model.PersonTypes, " Value", "Text"));
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Update Staff" />
+            </td>
+        </tr>
+             
+        
+    }
+
+</table>
+
+

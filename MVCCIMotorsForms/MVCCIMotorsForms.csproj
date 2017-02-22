@@ -130,7 +130,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -149,7 +151,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICMotorsDb.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\CustomerClass.cs" />
+    <Compile Include="Models\CustomerViewClass.cs" />
+    <Compile Include="Models\PersonClass.cs" />
     <Compile Include="Models\StaffClass.cs" />
+    <Compile Include="Models\StaffViewClass.cs" />
     <Compile Include="Person.cs">
       <DependentUpon>ICMotorsDb.tt</DependentUpon>
     </Compile>
@@ -225,8 +231,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\StaffManagement.cshtml" />
-    <Content Include="Views\Home\EditStaffMember.cshtml" />
+    <Content Include="Views\Staff\EditStaffMember.cshtml" />
+    <Content Include="Views\Customer\EditCustomer.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Staff\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

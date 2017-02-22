@@ -1,0 +1,74 @@
+﻿@model MVCCIMotorsForms.Models.CustomerViewClass
+@{
+    ViewBag.Title = "Customer Information";
+}
+
+<h2>Edit Customer</h2>
+<table>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.Customer.PersonId)
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Customer.FirstName)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Customer.FirstName)
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Customer.LastName)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Customer.LastName)
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Customer.Address1)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Customer.Address1)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.SuburbTypes)
+            </td>
+            <td>
+                @Html.DropDownListFor(m => m.Customer.SuburbId,
+                                            new SelectList(Model.SuburbTypes, "Value", "Text"))
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Customer.Address2)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Customer.Address2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Customer.PhoneNumber)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Customer.PhoneNumber)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Update Customer" />
+            </td>
+        </tr>
+
+
+    }
+
+</table>
+
+
+
