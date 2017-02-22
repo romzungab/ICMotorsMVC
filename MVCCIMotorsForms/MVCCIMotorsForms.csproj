@@ -154,6 +154,7 @@
     <Compile Include="Models\CustomerClass.cs" />
     <Compile Include="Models\CustomerViewClass.cs" />
     <Compile Include="Models\PersonClass.cs" />
+    <Compile Include="Models\ProductClass.cs" />
     <Compile Include="Models\StaffClass.cs" />
     <Compile Include="Models\StaffViewClass.cs" />
     <Compile Include="Person.cs">
