@@ -4,7 +4,7 @@
 }
 
 
-<h2>Edit Staff Member</h2>
+<h2>Staff Member Information</h2>
 <table>
     @using (Html.BeginForm())
     {
@@ -52,14 +52,6 @@
         </tr>
         <tr>
             <td>
-                @Html.LabelFor(m => m.Staff.PhoneNumber)
-            </td>
-            <td>
-                @Html.TextBoxFor(m => m.Staff.PhoneNumber)
-            </td>
-        </tr>
-        <tr>
-            <td>
                 @Html.LabelFor(m => m.SuburbTypes)
             </td>
             <td>
@@ -67,6 +59,15 @@
                                             new SelectList(Model.SuburbTypes, "Value", "Text"))
             </td>
         </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Staff.PhoneNumber)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Staff.PhoneNumber)
+            </td>
+        </tr>
+       
         <tr>
             <td>
                 @Html.LabelFor(m => m.PersonTypes)
@@ -78,7 +79,7 @@
         </tr>
         <tr>
             <td>
-                <input type="submit" value="Update Staff" />
+                <input type="submit" value="Save Staff" />
             </td>
         </tr>
              

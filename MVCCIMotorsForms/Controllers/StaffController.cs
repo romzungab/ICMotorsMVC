@@ -75,21 +75,39 @@ namespace MVCCIMotorsForms.Controllers
             return View(staffToEdit);
         }
 
+
+
         [HttpPost]
         public ActionResult EditStaffMember(StaffViewClass staffData)
         {
             IC_MotersEntities db = new IC_MotersEntities();
-            var newStaff = db.People.Find(staffData.Staff.PersonId);
+            if (staffData.Staff.PersonId != 0)
+            {
+                var newStaff = db.People.Find(staffData.Staff.PersonId);
 
-            newStaff.PersonId = staffData.Staff.PersonId;
-            newStaff.FirstName = staffData.Staff.FirstName.Trim();
-            newStaff.LastName = staffData.Staff.LastName.Trim();
-            newStaff.Address1 = staffData.Staff.Address1.Trim();
-            newStaff.Address2 = staffData.Staff.Address2.Trim();
-            newStaff.PhoneNumber = staffData.Staff.PhoneNumber.Trim();
-            newStaff.SuburbId = staffData.Staff.SuburbId;
-            newStaff.Salary = staffData.Staff.Salary;
-            newStaff.PersonTypeId = staffData.Staff.PersonTypeId;
+                newStaff.PersonId = staffData.Staff.PersonId;
+                newStaff.FirstName = staffData.Staff.FirstName.Trim();
+                newStaff.LastName = staffData.Staff.LastName.Trim();
+                newStaff.Address1 = staffData.Staff.Address1.Trim();
+                newStaff.Address2 = staffData.Staff.Address2.Trim();
+                newStaff.PhoneNumber = staffData.Staff.PhoneNumber.Trim();
+                newStaff.SuburbId = staffData.Staff.SuburbId;
+                newStaff.Salary = staffData.Staff.Salary;
+                newStaff.PersonTypeId = staffData.Staff.PersonTypeId;
+            }
+            else
+            {
+                Person newStaff = new Person();
+                newStaff.FirstName = staffData.Staff.FirstName.Trim();
+                newStaff.LastName = staffData.Staff.LastName.Trim();
+                newStaff.Address1 = staffData.Staff.Address1.Trim();
+                newStaff.Address2 = staffData.Staff.Address2.Trim();
+                newStaff.PhoneNumber = staffData.Staff.PhoneNumber.Trim();
+                newStaff.SuburbId = staffData.Staff.SuburbId;
+                newStaff.Salary = staffData.Staff.Salary;
+                newStaff.PersonTypeId = staffData.Staff.PersonTypeId;
+                db.People.Add(newStaff);
+            }
             db.SaveChanges();
             return RedirectToAction("Index", "Staff");
         }

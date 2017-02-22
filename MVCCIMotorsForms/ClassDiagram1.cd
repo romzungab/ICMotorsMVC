@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MVCCIMotorsForms.BundleConfig" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.FilterConfig" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\FilterConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.RouteConfig" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.MvcApplication" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.IC_MotersEntities" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAEAAAIAAAAAAAAAAAAAAEAAQAAAAACAAAAAAAQQ=</HashCode>
+      <FileName>ICMotorsDb.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.Person" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGAAAGAAAAAAAAAGIAAEQAAAAAAAAAABACAAAAAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.PersonType" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAIAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PersonType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.Product" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAAAAAQAAIAAAAAAAAAQAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.ProductCatagory" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAgAAAAAAAAAQ=</HashCode>
+      <FileName>ProductCatagory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.SalesOrder" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAIAAAAAAAAEAAAAAAAAAAAQAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>SalesOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.SalesOrderDetail" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAgAAAAABAAAAAAAAEAAAgAAAAAAA=</HashCode>
+      <FileName>SalesOrderDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.SuburbType" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAgAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>SuburbType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.Controllers.CustomerController" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\CustomerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.Controllers.HomeController" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.Controllers.StaffController" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAARAAAAAAAAAACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\StaffController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.Models.CustomerClass" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\CustomerClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.Models.CustomerViewClass" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\CustomerViewClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.Models.PersonClass" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGAAAEAAAAAAAAgEIAAEQAAAAAAAAAABAAAAAAAAAAg=</HashCode>
+      <FileName>Models\PersonClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.Models.StaffClass" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\StaffClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MVCCIMotorsForms.Models.StaffViewClass" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEQAAAAAAAAAAAAAAAAAECAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Models\StaffViewClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
