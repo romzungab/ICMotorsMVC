@@ -1,0 +1,28 @@
+﻿@model List<MVCCIMotorsForms.Models.ProductClass>
+@{
+    ViewBag.Title = "Welcome to my Store";
+}
+
+<h2>Select from the Products</h2>
+<table class="table table-bordered table-striped">
+
+    <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+       
+        <th>&nbsp</th>
+    </tr>
+    @foreach (var sm in Model)
+    {
+        <tr>
+            <td>@sm.Name</td>
+            <td>@sm.Category</td>
+            <td align="right">@sm.Price</td>
+           
+
+            <td><a href="/Store/AddToCart?productId=@sm.ProductId">Add to Cart</a></td>
+        </tr>
+    }
+</table>
+

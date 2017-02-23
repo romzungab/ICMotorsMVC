@@ -1,0 +1,35 @@
+﻿@model MVCCIMotorsForms.Models.CartClass
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>My Cart</h2>
+<table class="table table-bordered table-striped">
+
+    <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>&nbsp</th>
+    </tr>
+    @foreach (var sm in Model.CartItems)
+    {
+        <tr>
+            <td>@sm.Name</td>
+            <td>@sm.Category</td>
+            <td align="right">@sm.Price</td>
+            <td>@sm.Quantity</td>
+            @using (Html.BeginForm("Index", "Store"))
+            {
+                <div class="form-group">
+                    <div id="searchCustomer" class="input-group">
+                        @Html.TextBoxFor(m => m.SearchKey, new { @class = "form-control", placeholder = "Enter Search Keyword " })
+                    </div>
+                </div>
+            }
+            <td><a href="/Store/AddToCart?productId=@sm.ProductId">Add to Cart</a></td>
+        </tr>
+    }
+</table>
+

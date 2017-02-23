@@ -1,0 +1,20 @@
+﻿@model MVCCIMotorsForms.Models.SalesOrderDetail
+@{
+    ViewBag.Title = "AddToCart";
+}
+
+<h2>AddToCart</h2>
+<table>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.Product.ProductId)
+        <tr>
+            <td>
+                @Html.Label(m => m.Product.Name)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Staffs[0].FirstName)
+            </td>
+
+        </tr>
+</table>

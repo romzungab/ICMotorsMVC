@@ -132,6 +132,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MyCartController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Global.asax.cs">
@@ -152,6 +153,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICMotorsDb.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\CartClass.cs" />
+    <Compile Include="Models\SalesOrderDetailClass.cs" />
     <Compile Include="Models\CustomerClass.cs" />
     <Compile Include="Models\CustomerViewClass.cs" />
     <Compile Include="Models\PersonClass.cs" />
@@ -238,10 +241,13 @@
     <Content Include="Views\Customer\EditCustomer.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Staff\Index.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Store\AddToCart.cshtml" />
+    <Content Include="Views\Store\AddToMyCart.cshtml" />
+    <Content Include="Views\MyCart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Store\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

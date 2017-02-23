@@ -1,0 +1,26 @@
+﻿@model MVCCIMotorsForms.Models.CartClass
+@{
+    ViewBag.Title = "AddToMyCart";
+}
+
+<h2>My Cart</h2>
+<table class="table table-bordered table-striped">
+
+    <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>&nbsp</th>
+    </tr>
+    @foreach (var sm in Model.Product)
+    {
+        <tr>
+            <td>@sm.Name</td>
+            <td>@sm.Category</td>
+            <td align="right">@sm.Price</td>
+
+            <td><a href="/Store/AddToCart?productId=@sm.ProductId">Add to Cart</a></td>
+        </tr>
+    }
+</table>
