@@ -1,14 +1,18 @@
-﻿@model List<MVCCIMotorsForms.Models.CustomerClass>
+﻿@model MVCCIMotorsForms.Models.CustomerViewClass
 @{
     ViewBag.Title = "Customer Management";
 }
 
 <h2>Customer Management</h2>
-
  <h3><a href="/Customer/EditCustomer?customerId=0">Add Customer</a></h3>
-
-      
-
+@using (Html.BeginForm("Index", "Customer"))
+{
+    <div class="form-group">
+        <div id="searchCustomer" class="input-group">
+            @Html.TextBoxFor(m => m.SearchKey, new { @class = "form-control", placeholder = "Enter Search Keyword " })
+        </div>
+    </div>
+}
 <table class="table table-bordered table-striped">
 
     <tr>
@@ -18,10 +22,10 @@
         <th>Address 1</th>
         <th>Suburb</th>
         <th>Address 2</th>
-        <th>Phone</th>
-        <th>&nbsp</th>
+        <th>Phone Number</th>
+         <th>&nbsp</th>
     </tr>
-    @foreach (var sm in Model)
+    @foreach (var sm in Model.Customers)
     {
         <tr>
             <td>@sm.PersonId</td>
@@ -31,8 +35,10 @@
             <td>@sm.Suburb</td>
             <td>@sm.Address2</td>
             <td>@sm.PhoneNumber</td>
+           
             <td><a href="/Customer/EditCustomer?customerId=@sm.PersonId">Edit</a></td>
         </tr>
     }
 </table>
+
 

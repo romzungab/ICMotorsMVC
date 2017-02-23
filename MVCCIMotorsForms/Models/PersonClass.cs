@@ -29,7 +29,25 @@ namespace MVCCIMotorsForms.Models
         public int PersonTypeId { get; set; }
 
 
-       
-           
+        [Display(Name = "Suburb")]
+        public string Suburb { get; set; }
+        [Display(Name = "Employee Type")]
+        public string EmployeeType { get; set; }
+        public PersonClass() { }
+        public PersonClass(Person p)
+        {
+
+            PersonId = p.PersonId;
+            PersonTypeId = p.PersonTypeId;
+            FirstName = p.FirstName;
+            LastName = p.LastName;
+            Address1 = p.Address1;
+            Address2 = p.Address2;
+            SuburbId = p.SuburbId;
+            PhoneNumber = p.PhoneNumber;
+
+        }
+
+
     }
 }

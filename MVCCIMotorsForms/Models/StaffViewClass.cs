@@ -21,13 +21,15 @@ namespace MVCCIMotorsForms.Models
         public StaffViewClass() { }
         public StaffViewClass(IEnumerable<SelectListItem> suburbTypes, IEnumerable<SelectListItem> staffTypes)
         {
-
+           
             SuburbTypes = suburbTypes;
             PersonTypes = staffTypes;
         }
-        public StaffViewClass(Person staff, IEnumerable<SelectListItem> suburbTypes, IEnumerable<SelectListItem> staffTypes) : this(suburbTypes, staffTypes)
+        public StaffViewClass(Person person, IEnumerable<SelectListItem> suburbTypes, IEnumerable<SelectListItem> staffTypes) : this(suburbTypes, staffTypes)
         {
-            Staff = new StaffClass(staff);
+            Staffs = new List<StaffClass>();
+            var staff = new StaffClass(person);
+            Staffs.Add(staff);
 
         }
     }

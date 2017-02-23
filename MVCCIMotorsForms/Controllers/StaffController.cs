@@ -24,7 +24,9 @@ namespace MVCCIMotorsForms.Controllers
                                          SuburbId = x.SuburbId,
                                          PersonTypeId = x.PersonTypeId,                                      
                                          Salary = x.Salary,
-                                         PhoneNumber = x.PhoneNumber
+                                         PhoneNumber = x.PhoneNumber,
+                                         EmployeeType = x.PersonType.PersonType1,
+                                         Suburb = x.SuburbType.Suburb
                                      })
                                      .ToList();
             
@@ -33,7 +35,7 @@ namespace MVCCIMotorsForms.Controllers
             viewModel.SuburbTypes = GetSuburbs();
             viewModel.PersonTypes = GetStaffTypes();
             
-            return View(stafflist);
+            return View(viewModel);
         }
         private IEnumerable<SelectListItem> GetSuburbs()
         {
@@ -86,31 +88,32 @@ namespace MVCCIMotorsForms.Controllers
         public ActionResult EditStaffMember(StaffViewClass staffData)
         {
             IC_MotersEntities db = new IC_MotersEntities();
-            if (staffData.Staff.PersonId != 0)
+            if (staffData.Staffs[0].PersonId != 0)
             {
-                var newStaff = db.People.Find(staffData.Staff.PersonId);
+                var newStaff = db.People.Find(staffData.Staffs[0].PersonId);
 
-                newStaff.PersonId = staffData.Staff.PersonId;
-                newStaff.FirstName = staffData.Staff.FirstName.Trim();
-                newStaff.LastName = staffData.Staff.LastName.Trim();
-                newStaff.Address1 = staffData.Staff.Address1.Trim();
-                newStaff.Address2 = staffData.Staff.Address2.Trim();
-                newStaff.PhoneNumber = staffData.Staff.PhoneNumber.Trim();
-                newStaff.SuburbId = staffData.Staff.SuburbId;
-                newStaff.Salary = staffData.Staff.Salary;
-                newStaff.PersonTypeId = staffData.Staff.PersonTypeId;
+                newStaff.PersonId = staffData.Staffs[0].PersonId;
+                newStaff.FirstName = staffData.Staffs[0].FirstName.Trim();
+                newStaff.LastName = staffData.Staffs[0].LastName.Trim();
+                newStaff.Address1 = staffData.Staffs[0].Address1.Trim();
+                newStaff.Address2 = staffData.Staffs[0].Address2.Trim();
+                newStaff.PhoneNumber = staffData.Staffs[0].PhoneNumber.Trim();
+                newStaff.SuburbId = staffData.Staffs[0].SuburbId;
+                newStaff.Salary = staffData.Staffs[0].Salary;
+                newStaff.PersonTypeId = staffData.Staffs[0].PersonTypeId;
+                
             }
             else
             {
                 Person newStaff = new Person();
-                newStaff.FirstName = staffData.Staff.FirstName.Trim();
-                newStaff.LastName = staffData.Staff.LastName.Trim();
-                newStaff.Address1 = staffData.Staff.Address1.Trim();
-                newStaff.Address2 = staffData.Staff.Address2.Trim();
-                newStaff.PhoneNumber = staffData.Staff.PhoneNumber.Trim();
-                newStaff.SuburbId = staffData.Staff.SuburbId;
-                newStaff.Salary = staffData.Staff.Salary;
-                newStaff.PersonTypeId = staffData.Staff.PersonTypeId;
+                newStaff.FirstName = staffData.Staffs[0].FirstName.Trim();
+                newStaff.LastName = staffData.Staffs[0].LastName.Trim();
+                newStaff.Address1 = staffData.Staffs[0].Address1.Trim();
+                newStaff.Address2 = staffData.Staffs[0].Address2.Trim();
+                newStaff.PhoneNumber = staffData.Staffs[0].PhoneNumber.Trim();
+                newStaff.SuburbId = staffData.Staffs[0].SuburbId;
+                newStaff.Salary = staffData.Staffs[0].Salary;
+                newStaff.PersonTypeId = staffData.Staffs[0].PersonTypeId;
                 db.People.Add(newStaff);
             }
             db.SaveChanges();

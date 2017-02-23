@@ -1,4 +1,4 @@
-﻿@model List<MVCCIMotorsForms.Models.StaffClass>
+﻿@model MVCCIMotorsForms.Models.StaffViewClass
 @{
     ViewBag.Title = "Staff Management";
 }
@@ -19,7 +19,7 @@
         <th>Staff Type</th>
         <th>&nbsp</th>
     </tr>
-    @foreach (var sm in Model)
+    @foreach (var sm in Model.Staffs)
     {
         <tr>
             <td>@sm.PersonId</td>
@@ -29,7 +29,7 @@
             <td>@sm.Suburb</td>
             <td>@sm.Address2</td>
             <td>@sm.PhoneNumber</td>
-            <td>@sm.PersonType</td>
+            <td>@sm.EmployeeType</td>
 
             <td><a href="/Staff/EditStaffMember?staffId=@sm.PersonId">Edit</a></td>
         </tr>

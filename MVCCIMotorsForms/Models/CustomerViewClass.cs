@@ -18,5 +18,20 @@ namespace MVCCIMotorsForms.Models
         [Display(Name = "Employee Type")]
         public IEnumerable<SelectListItem> PersonTypes { get; set; }
 
+        public CustomerViewClass() { }
+        public CustomerViewClass(IEnumerable<SelectListItem> suburbTypes)
+        {
+
+            SuburbTypes = suburbTypes;
+            
+        }
+
+        public CustomerViewClass(Person person, IEnumerable<SelectListItem> suburbTypes) : this(suburbTypes)
+        {
+            Customers = new List<CustomerClass>();
+            var customer = new CustomerClass(person);
+            Customers.Add(customer);
+
+        }
     }
 }

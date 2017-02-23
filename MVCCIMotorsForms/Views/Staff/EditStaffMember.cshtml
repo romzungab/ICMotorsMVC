@@ -8,46 +8,46 @@
 <table>
     @using (Html.BeginForm())
     {
-       @Html.HiddenFor(m => m.Staff.PersonId)
+       @Html.HiddenFor(m => m.Staffs[0].PersonId)
         <tr>
             <td>
-                @Html.LabelFor(m => m.Staff.FirstName)
+                @Html.LabelFor(m => m.Staffs[0].FirstName)
             </td>
             <td>
-                @Html.TextBoxFor(m => m.Staff.FirstName)
+                @Html.TextBoxFor(m => m.Staffs[0].FirstName)
             </td>
 
         </tr>
         <tr>
             <td>
-                @Html.LabelFor(m => m.Staff.LastName)
+                @Html.LabelFor(m => m.Staffs[0].LastName)
             </td>
             <td>
-                @Html.TextBoxFor(m => m.Staff.LastName)
-            </td>
-        </tr>
-        <tr>
-            <td>
-                @Html.LabelFor(m => m.Staff.Salary)
-            </td>
-            <td>
-                @Html.TextBoxFor(m => m.Staff.Salary)
+                @Html.TextBoxFor(m => m.Staffs[0].LastName)
             </td>
         </tr>
         <tr>
             <td>
-                @Html.LabelFor(m => m.Staff.Address1)
+                @Html.LabelFor(m => m.Staffs[0].Salary)
             </td>
             <td>
-                @Html.TextBoxFor(m => m.Staff.Address1)
+                @Html.TextBoxFor(m => m.Staffs[0].Salary)
             </td>
         </tr>
         <tr>
             <td>
-                @Html.LabelFor(m => m.Staff.Address2)
+                @Html.LabelFor(m => m.Staffs[0].Address1)
             </td>
             <td>
-                @Html.TextBoxFor(m => m.Staff.Address2)
+                @Html.TextBoxFor(m => m.Staffs[0].Address1)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Staffs[0].Address2)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Staffs[0].Address2)
             </td>
         </tr>
         <tr>
@@ -55,16 +55,16 @@
                 @Html.LabelFor(m => m.SuburbTypes)
             </td>
             <td>
-                @Html.DropDownListFor(m => m.Staff.SuburbId,
+                @Html.DropDownListFor(m => m.Staffs[0].SuburbId,
                                             new SelectList(Model.SuburbTypes, "Value", "Text"))
             </td>
         </tr>
         <tr>
             <td>
-                @Html.LabelFor(m => m.Staff.PhoneNumber)
+                @Html.LabelFor(m => m.Staffs[0].PhoneNumber)
             </td>
             <td>
-                @Html.TextBoxFor(m => m.Staff.PhoneNumber)
+                @Html.TextBoxFor(m => m.Staffs[0].PhoneNumber)
             </td>
         </tr>
        
@@ -73,7 +73,7 @@
                 @Html.LabelFor(m => m.PersonTypes)
             </td>
             <td>
-                @Html.DropDownListFor(m => m.Staff.PersonTypeId,
+                @Html.DropDownListFor(m => m.Staffs[0].PersonTypeId,
                                             new SelectList(Model.PersonTypes, " Value", "Text"));
             </td>
         </tr>
